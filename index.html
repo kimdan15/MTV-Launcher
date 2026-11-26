@@ -3,110 +3,267 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#090d18">
-
-<title>MTV Launcher | Official Website</title>
-
-<meta name="description" content="MTV Launcher - تجربة متطورة لشاشات Android TV. واجهة ذكية، جزيرة ديناميكية، تطبيقات إسلامية، ثيمات وأدوات متقدمة.">
+<meta name="theme-color" content="#10131c">
+<title>MTV Launcher | Android TV</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
-
-:root {
-  --bg:#090d18;
-  --card:#121a2b;
-  --gold:#e6b85c;
-  --blue:#638cff;
-  --text:#f5f7ff;
-  --muted:#9aa6bb;
-}
-
 * {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html {
-  scroll-behavior:smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background:var(--bg);
-  color:var(--text);
-  font-family:'Cairo',sans-serif;
-  overflow-x:hidden;
+    font-family: Arial, sans-serif;
+    background: #10131c;
+    color: white;
+    line-height: 1.8;
 }
-
-a {
-  text-decoration:none;
-  color:inherit;
-}
-
-.container {
-  width:90%;
-  max-width:1150px;
-  margin:auto;
-}
-
-/* Navigation */
 
 header {
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:rgba(9,13,24,.88);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid #ffffff12;
-}
-
-nav {
-  height:78px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #292d39;
 }
 
 .logo {
-  display:flex;
-  align-items:center;
-  gap:12px;
-  font-size:23px;
-  font-weight:900;
-  direction:ltr;
-}
-
-.logo-icon {
-  width:43px;
-  height:43px;
-  border-radius:14px;
-  background:linear-gradient(135deg,#e6b85c,#bd8531);
-  color:#111827;
-  display:grid;
-  place-items:center;
-  font-weight:900;
-  font-size:20px;
+    font-size: 27px;
+    font-weight: bold;
+    direction: ltr;
 }
 
 .logo span {
-  color:var(--gold);
+    color: #edb936;
 }
 
-.nav-links {
-  display:flex;
-  gap:28px;
-  color:var(--muted);
-  font-size:14px;
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    margin-right: 20px;
 }
-
-.nav-links a:hover {
-  color:var(--gold);
-}
-
-/* Hero */
 
 .hero {
-  min-height:650px;
-  display:flex;
-  align-items:center;
-  text-align
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background: radial-gradient(circle at center, #252c40, #10131c 70%);
+}
+
+.badge {
+    color: #edb936;
+    border: 1px solid #edb936;
+    padding: 5px 18px;
+    border-radius: 30px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 7vw, 75px);
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #edb936;
+}
+
+.hero p {
+    color: #b9bdca;
+    font-size: 19px;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    padding: 13px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.primary {
+    background: #edb936;
+    color: #111;
+}
+
+.secondary {
+    border: 1px solid #555d70;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+}
+
+section {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #aeb4c2;
+    margin-bottom: 35px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: #1b2030;
+    border: 1px solid #30364a;
+    padding: 28px 20px;
+    border-radius: 18px;
+}
+
+.card .icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #aeb4c2;
+    font-size: 14px;
+}
+
+.download {
+    background: linear-gradient(135deg, #242b40, #171b29);
+    border-radius: 25px;
+    margin: 30px 6%;
+    padding: 50px 20px;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid #292d39;
+    color: #9299a9;
+}
+
+footer a {
+    color: #edb936;
+    text-decoration: none;
+}
+
+@media(max-width:600px) {
+    header {
+        padding: 18px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 65vh;
+    }
+
+    section {
+        padding: 45px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MTV <span>Launcher</span></div>
+    <nav>
+        <a href="#home">الرئيسية</a>
+        <a href="#features">المميزات</a>
+        <a href="#download">التحميل</a>
+    </nav>
+</header>
+
+<div class="hero" id="home">
+    <div class="badge">Android TV Experience</div>
+
+    <h1>MTV <span>Launcher</span></h1>
+
+    <p>
+        تجربة جديدة لشاشة Android TV.
+        واجهة ذكية، تصميم عصري، تحكم متكامل
+        ومجموعة من الأدوات التي تجعل تلفزيونك أكثر تميزاً.
+    </p>
+
+    <div class="buttons">
+        <a href="#download" class="btn primary">تحميل التطبيق</a>
+        <a href="https://t.me/MTVLauncher"
+           class="btn secondary">قناة التحديثات</a>
+    </div>
+</div>
+
+<section id="features">
+    <h2>اكتشف عالم MTV</h2>
+    <p class="subtitle">مميزات تجعل تجربة Android TV أكثر ذكاءً</p>
+
+    <div class="features">
+
+        <div class="card">
+            <div class="icon">🏝️</div>
+            <h3>الجزيرة الديناميكية</h3>
+            <p>معلومات ذكية وتنبيهات تفاعلية في واجهة واحدة.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📺</div>
+            <h3>واجهة متطورة</h3>
+            <p>تصميم عصري وسهل الاستخدام مع تحكم كامل بالريموت.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🕌</div>
+            <h3>إسلاميات</h3>
+            <p>مواقيت الصلاة والقرآن الكريم والإذاعات الإسلامية.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">⚡</div>
+            <h3>مركز التسريع</h3>
+            <p>أدوات لإدارة تطبيقات المستخدم وتحسين تجربة الاستخدام.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎨</div>
+            <h3>الثيمات</h3>
+            <p>مجموعة من الخلفيات والأنماط لتخصيص شاشتك.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌤️</div>
+            <h3>الطقس والأخبار</h3>
+            <p>تابع حالة الطقس والأخبار والأحداث الرياضية.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="download" id="download">
+    <h2>ابدأ تجربتك الآن</h2>
+    <p class="subtitle">
+        اكتشف تجربة MTV Launcher على جهاز Android TV الخاص بك.
